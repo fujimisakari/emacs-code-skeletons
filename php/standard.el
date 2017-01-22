@@ -32,37 +32,37 @@
   ( "Another argument? %s: "
     > ", " str )
   > ")" \n
-  > -1 "{" \n
+  > -4 "{" \n
   _ \n
-  > -1 "}")
+  > -4 "}")
 
 (define-skeleton php-if
   "Insert a if statement"
   ""
   '(setq condition (skeleton-read "Condition? "))
   > "if (" condition ")" \n
-  > -1 "{" \n
+  > -4 "{" \n
   > _ \n
-  > -1 "}" \n)
+  > -4 "}" \n)
 
 (define-skeleton php-if_else
   "Insert a if statement"
   ""
   '(setq condition (skeleton-read "Condition? "))
   > "if (" condition ")" \n
-  > -1 "{" \n
+  > -4 "{" \n
   > _ \n
   ( "other condition, %s: "
-    > -1 "}" \n
+    > -4 "}" \n
     > "else if(" str ")" \n
-    > -1 "{" \n
+    > -4 "{" \n
     > _ \n)
-  > -1 "}" \n
+  > -4 "}" \n
   > "else" \n
-  > -1 "{" \n
+  > -4 "{" \n
   > _ \n
   resume:
-  > -1 "}" \n)
+  > -4 "}" \n)
 
 (define-skeleton php-for
   "Insert a for statement."
@@ -70,9 +70,9 @@
   '(setq index (skeleton-read "Index variable? "))
   '(setq condition (skeleton-read "Condition? "))
   > "for (" condition "; " index "++)" \n
-  > -1 "{" \n
+  > -4 "{" \n
   > _ \n
-  > -1 "}" \n)
+  > -4 "}" \n)
 
 (define-skeleton php-foreach
   "Insert a foreach statement."
@@ -80,9 +80,9 @@
   '(setq value (skeleton-read "Value variable? "))
   '(setq array (skeleton-read "Array? "))
   > "foreach (" array " as " value ")" \n
-  > -1 "{" \n
+  > -4 "{" \n
   > _ \n
-  > -1 "}" \n)
+  > -4 "}" \n)
 
 (define-skeleton php-switch
   "Insert a switch statement."
@@ -90,40 +90,40 @@
   '(setq index (skeleton-read "Index variable? "))
   "switch (" index ") {" \n
   ("Some case? %s: "
-   > -1 "case " str ":" \n
+   > -4 "case " str ":" \n
    > _ \n
    > "break;"\n)
-   > -1 "}")
+   > -4 "}")
 
 (define-skeleton php-try-catch
   "Insert a try catch statement"
   ""
   '(setq ex (skeleton-read "Exception? "))
   > "try" \n
-  > -1 "{" \n
+  > -4 "{" \n
   _ \n
-  > -1 "}" \n
+  > -4 "}" \n
   > "catch (" ex ")" \n
-  > -1 "{" \n
+  > -4 "{" \n
   _ \n
-  > -1 "}" \n)
+  > -4 "}" \n)
 
 (define-skeleton php-try-catch-finally
   "Insert a try catch statement"
   ""
   '(setq ex (skeleton-read "Exception? "))
   > "try" \n
-  > -1 "{" \n
+  > -4 "{" \n
   _ \n
-  > -1 "}" \n
+  > -4 "}" \n
   > "catch (" ex ")" \n
-  > -1 "{" \n
+  > -4 "{" \n
   _ \n
-  > -1 "}" \n
+  > -4 "}" \n
   > "finally" \n
-  > -1 "{" \n
+  > -4 "{" \n
   _ \n
-  > -1 "}" \n)
+  > -4 "}" \n)
 
 (define-skeleton php-include
   "Insert a include statement."
