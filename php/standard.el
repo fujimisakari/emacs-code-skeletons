@@ -169,3 +169,9 @@
   '(setq variable (skeleton-read "Variable? "))
   '(setq value (skeleton-read "Value? "))
   "define(\"" variable "\",\"" value "\");")
+
+(define-skeleton php-throw-exception
+  "Insert a require_once statement."
+  ""
+  '(setq value (skeleton-read "Value? "))
+  > "throw new \\Exception('" value "');")
