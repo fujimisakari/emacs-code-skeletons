@@ -98,13 +98,9 @@
 (define-skeleton php-try-catch
   "Insert a try catch statement"
   ""
-  '(setq ex (skeleton-read "Exception? "))
-  > "try" \n
-  > -4 "{" \n
+  > "try {" \n
   _ \n
-  > -4 "}" \n
-  > "catch (" ex ")" \n
-  > -4 "{" \n
+  > -4 "} catch (\Exception $e) {" \n
   _ \n
   > -4 "}" \n)
 
