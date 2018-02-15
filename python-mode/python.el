@@ -159,6 +159,13 @@
   > "import ipdb; ipdb.set_trace()" \n
 )
 
+(define-skeleton python-print
+  "Insert a print statement."
+  ""
+  '(setq val (skeleton-read "value? "))
+  > "print(" val ")" \n
+)
+
 (define-skeleton python-logging
   "Insert a logging statement."
   > "import logging; logging.debug('')" \n
